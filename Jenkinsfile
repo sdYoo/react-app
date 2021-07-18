@@ -23,7 +23,7 @@ pipeline {
         stage('Docker build') {
             agent any
             steps {
-                sh 'docker build -t {image_name}:latest .'
+                sh 'docker build -t react-app:latest .'
             }
         }
         stage('Docker run') {
@@ -32,7 +32,7 @@ pipeline {
                 sh 'docker ps -f name=raor_dev -q | xargs --no-run-if-empty docker container stop'
                 sh 'docker container ls -a -fname=raor_dev -q | xargs -r docker container rm'
                 sh 'docker images --no-trunc --all --quiet --filter="dangling=true" | xargs --no-run-if-empty docker rmi'
-                sh 'docker run -d --name {container_name} -p 80:80 {image_name}:latest'
+                sh 'docker run -d --name react-app -p 80:80 react-app:latest'
             }
         }
     }
