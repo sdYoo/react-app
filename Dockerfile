@@ -3,7 +3,5 @@ VOLUME /nginx_home
 RUN rm -rf /etc/nginx/conf.d/default.conf
 RUN pwd
 RUN ls
-RUN cd nginx_home
-RUN ls
-ADD ./nginx_home/nginx.conf /etc/nginx/conf.d/default.conf
+ADD ./nginx/default.conf /etc/nginx/conf.d/default.conf
 ADD ./build /usr/share/nginx/html
