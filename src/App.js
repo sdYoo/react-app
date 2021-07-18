@@ -7,7 +7,8 @@ function App() {
       <header className="App-header">
         <img src={Morpheuslogo} className="App-logo" alt="logo" />
         <p>
-          Morpheus PoC CI/CD Test Page!!
+          Morpheus PoC CI/CD Test Page!
+          (2021.07.18-001)
         </p>
       </header>
     </div>
