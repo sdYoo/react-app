@@ -29,8 +29,8 @@ pipeline {
         stage('Docker run') {
             agent any
             steps {
-                sh 'docker ps -f name=raor_dev -q | xargs --no-run-if-empty docker container stop'
-                sh 'docker container ls -a -fname=raor_dev -q | xargs -r docker container rm'
+                sh 'docker ps -f name=react-app -q | xargs --no-run-if-empty docker container stop'
+                sh 'docker container ls -a -fname=react-app -q | xargs -r docker container rm'
                 sh 'docker images --no-trunc --all --quiet --filter="dangling=true" | xargs --no-run-if-empty docker rmi'
                 sh 'docker run -d --name react-app -p 80:80 react-app:latest'
             }
