@@ -1,6 +1,6 @@
 pipeline {
     agent none
-    //기본적으로 체크아웃을 하지 않는 옵션
+    //기본적으로 체크아웃을 하지 않는 옵션-check
     options { skipDefaultCheckout(true) }
     stages {
         stage('Checkout repository') {
