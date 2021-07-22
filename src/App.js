@@ -8,7 +8,7 @@ function App() {
         <img src={Morpheuslogo} className="App-logo" alt="logo" />
         <p>
           Morpheus PoC CI/CD Test Page!
-          (2021.07.22-CJ-TEST-0111111111111)
+          (2021.07.22-CJ-PoC modify)
         </p>
       </header>
     </div>
